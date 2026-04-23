@@ -1,0 +1,16 @@
+torch
+monai
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+nibabel
+tqdm
+Pillow
+imageio
+jupyter
+import-ipynb
+nbformat
+torchvision
+ipython
