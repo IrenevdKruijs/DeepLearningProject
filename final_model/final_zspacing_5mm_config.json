@@ -1,0 +1,30 @@
+{
+  "model_name": "final_zspacing_5mm_stratified_5fold",
+  "description": "Final reported model: post-presentation z-spacing-only 5.0 mm setup with stratified 5-fold CV.",
+  "source_notebook": "final_model/03_final_zspacing_5mm_kfold_training.ipynb",
+  "evaluation_notebook": "final_model/05a_evaluate_final_kfold_model.ipynb",
+  "data_dirs": {
+    "train": "train/",
+    "test": "test/"
+  },
+  "seed": 10,
+  "n_folds": 5,
+  "target_spacing": "(1.5625, 1.5625, 5.0)",
+  "median_spacing": "(1.5625, 1.5625, 10.0)",
+  "roi_size": [
+    256,
+    256,
+    16
+  ],
+  "arch_name": "wider2",
+  "channels": "(64, 128, 256, 512, 1024)",
+  "strides": "(2, 2, 2, 2)",
+  "loss_name": "DiceLoss",
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "batch_size": 2,
+  "epochs": 1000,
+  "min_epochs": 400,
+  "early_stopping_patience": 200,
+  "early_stopping_min_delta": 0.0001
+}

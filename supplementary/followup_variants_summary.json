@@ -1,0 +1,40 @@
+{
+  "runs_lenient_wider2_kfold5_zspacing_xycrop": {
+    "run_name": "kfold5_zspacing_xycrop_wider2_DiceLoss_lr0.001_wd1e-05_bs2_ep1000_min400_pat200",
+    "arch_name": "wider2",
+    "loss_name": "DiceLoss",
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2,
+    "channels": "(64, 128, 256, 512, 1024)",
+    "strides": "(2, 2, 2, 2)",
+    "target_spacing": "(1.5625, 1.5625, 5.0)",
+    "xy_crop_margin_ratio": 0.35
+  },
+  "runs_lenient_wider2_kfold5_zspacing_dicece": {
+    "run_name": "kfold5_zspacing_only_wider2_DiceCELoss_lr0.001_wd1e-05_bs2_ep1000_min400_pat200",
+    "arch_name": "wider2",
+    "loss_name": "DiceCELoss",
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2,
+    "channels": "(64, 128, 256, 512, 1024)",
+    "strides": "(2, 2, 2, 2)",
+    "target_spacing": "(1.5625, 1.5625, 5.0)"
+  },
+  "runs_lenient_wider2_kfold5_zspacing_dice_sched": {
+    "run_name": "kfold5_zspacing_only_wider2_DiceLoss_lr0.002_wd1e-05_bs2_ep1000_min400_pat200_ReduceLROnPlateau",
+    "arch_name": "wider2",
+    "loss_name": "DiceLoss",
+    "lr": 0.002,
+    "weight_decay": 1e-05,
+    "batch_size": 2,
+    "channels": "(64, 128, 256, 512, 1024)",
+    "strides": "(2, 2, 2, 2)",
+    "target_spacing": "(1.5625, 1.5625, 5.0)",
+    "scheduler_name": "ReduceLROnPlateau",
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 30,
+    "scheduler_min_lr": 1e-06
+  }
+}
